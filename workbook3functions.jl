@@ -1,10 +1,13 @@
 function finitediff3(func,x,h)
+#Gives the 3 point stencil finite difference formula for the derivative of func
     return (4*func(x+h)-3*func(x)-func(x+2*h))/(2*h)
 end
 function sinexp(x)
+#Evaluates sin(exp(x)) at x
     return sin(exp(x))
 end
 function Dsinexp(x)
+#Evaluates the derivative of sin(exp(x))
     return exp(x)*cos(exp(x))
 end
 function bracketbisect(func,a,b,epstol)
@@ -63,4 +66,3 @@ function Goldensec(func,a,b,epstol)
     end
     return c,error[1:i-1],i-1
 end
-       
